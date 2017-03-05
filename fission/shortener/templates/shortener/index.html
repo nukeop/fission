@@ -1,0 +1,11 @@
+{% extends 'shortener/base.html' %}
+{% block content %}
+<div class="container shortener_form">
+  <h2>Django link shortening service</h2><br />
+  <form class="form-inline" method="POST" action="{% url 'shortener:link' %}">
+    {% csrf_token %}
+    <input type="url" name="long_url" class="form-control shortener_form_url" placeholder="Paste a link to shorten it">
+    <button type="submit" class="btn btn-default">Shorten</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends 'shortener/base.html' %}
+{% block content %}
+<div class="container preview_container">
+  <h2>{{ message }}</h2><br />
+  <table class="table table-bordered table-condensed preview_table">
+
+    <tr><td colspan="2" style="font-weight: bold;"><br />Link<br /></td></tr>
+
+    <tr>
+      <td>
+        Full URL
+      </td>
+      <td>
+        <a href="{{ full_url }}">{{ full_url }}</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Visits
+      </td>
+      <td>
+        {{ visits }}
+      </td>
+    </tr>
+
+    <tr><td colspan="2" style="font-weight: bold;"><br />Submitter<br /></td></tr>
+
+    <tr>
+      <td>
+        Username:
+      </td>
+      <td>
+        {{ submitter.username  }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        First name:
+      </td>
+      <td>
+        {{ submitter.first_name  }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Last name:
+      </td>
+      <td>
+        {{ submitter.last_name  }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Email:
+      </td>
+      <td>
+        {{ submitter.email  }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Joined:
+      </td>
+      <td>
+        {{ submitter.date_joined  }}
+      </td>
+    </tr>
+  </table>
+
+</div>
+{% endblock %}
